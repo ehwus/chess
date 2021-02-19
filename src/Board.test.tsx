@@ -13,4 +13,10 @@ describe('Board rendering', () => {
     const wrapper = shallow(<Board />);
     expect(wrapper.find('.square')).toHaveLength(64);
   });
+
+  it('has 32 white squares, 32 black squares', () => {
+    const wrapper = shallow(<Board />);
+    expect(wrapper.find('.square').find('.white')).toHaveLength(32);
+    expect(wrapper.find('.square').find('.black')).toHaveLength(32);
+  });
 });

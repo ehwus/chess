@@ -3,7 +3,8 @@ import React from 'react';
 const Board = () => {
   const squares = [];
   for (let i = 0; i < 64; i++) {
-    squares.push(<div className='square' key={i}></div>);
+    let color = i % 2 === 0 ? 'white' : 'black';
+    squares.push(<div className={'square ' + color} key={i}></div>);
   }
 
   return <>{squares}</>;
